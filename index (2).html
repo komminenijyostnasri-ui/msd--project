@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ByteXL E-commerce - Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-container">
+      <a href="index.html" class="logo">ByteXL Shop</a>
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="wishlist.html" class="nav-link">Wishlist</a></li>
+          <li><a href="cart.html" class="nav-link">Cart <span id="cart-count" class="cart-count">0</span></a></li>
+          <li><a href="profile.html" class="nav-link">Profile</a></li>
+          <li><button id="login-btn" class="btn btn-primary">Login</button></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-container">
+        <h1>Welcome to ByteXL Shop</h1>
+        <p>Your one-stop shop for tech products and gadgets.</p>
+        <a href="products.html" class="btn btn-primary btn-lg">Shop Now</a>
+      </div>
+    </section>
+
+    <section class="featured-products container">
+      <h2>Featured Products</h2>
+      <div class="product-grid" id="featured-products">
+        <!-- Featured products inserted by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2024 ByteXL E-commerce. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="login-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="login-title">
+    <div class="modal-content">
+      <button class="modal-close" id="login-close" aria-label="Close login form">&times;</button>
+      <h2 id="login-title">Login</h2>
+      <form id="login-form" novalidate>
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" name="email" required />
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" name="password" required minlength="6" />
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
